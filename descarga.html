@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cargando tu regalo...</title>
+  <style>
+    body {
+      background: #1a1a1a;
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+    h1 {
+      margin-top: 20px;
+      font-size: 2em;
+    }
+    .loading {
+      margin: 20px auto;
+      width: 200px; /* Ajustado para dispositivos móviles */
+      height: 80px;
+      position: relative;
+    }
+    .reindeer {
+      width: 150px; /* Ajustar ancho y alto del GIF */
+      height: 150px;
+      background: url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhp8POfSMW5Qx1hueiiFsaMgXX5fKCXw0VP1qubbY402OgzLl6Nkn-x2LtVsNSAC3CJ7JcRzVw2XsQuPqWk7QGe-z5fmNmrbrlK00AXePppHfalbqIzm_T9oJBx43FbVe50vZFkush6_js7/s1600/Trineo-de-Papa-Noel-009.gif') no-repeat center center;
+      background-size: contain;
+      position: absolute;
+      animation: run 2s linear infinite;
+    }
+    @keyframes run {
+      0% { left: 0; }
+      100% { left: calc(100% - 150px); }
+    }
+  </style>
+</head>
+<body>
+  <h1>Cargando tu regalo...</h1>
+  <div class="loading">
+    <div class="reindeer"></div>
+  </div>
+  <script>
+    setTimeout(() => {
+      window.location.href = "fin.html"; // Redirige a la siguiente página
+    }, 5000); // Cambia de página después de 5 segundos
+  </script>
+</body>
+</html>
